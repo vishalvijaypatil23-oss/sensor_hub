@@ -2,6 +2,10 @@
 
 A 200 Hz synthetic sensor (seeded 1 Hz sine + noise) streamed to Flutter as **binary batches**, with **native-side backpressure** and **native lifecycle handling**. This is one plugin package (not federated), written in Dart, Kotlin and Swift. It depends only on the Flutter SDK, and the Dart side imports `foundation` + `services`, never `widgets`.
 
+## Demo video
+
+[demo/sensor_hub_demo.mp4](demo/sensor_hub_demo.mp4): 60-second recording on a real device (Micromax IN1, Android) with the sensor at 200 Hz and the performance overlay visible. It shows the live wave, about 20 batches per second, **Block UI 1 s** (one large coalesced batch, nothing dropped), and going to the background and back with no timestamp gap.
+
 ## Use it in any app
 
 ```yaml
