@@ -1,0 +1,28 @@
+name: sensor_hub
+description: "High-rate sensor bridge: binary-coded, natively coalesced, backpressured sample batches."
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0'
+
+# Deliberately minimal: only the Flutter SDK. No pub.dev sensor/streaming
+# packages, no plugin_platform_interface (this is ONE package, not federated).
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.swt.sensor_hub
+        pluginClass: SensorHubPlugin
+      ios:
+        pluginClass: SensorHubPlugin
